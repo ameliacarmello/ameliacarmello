@@ -5,7 +5,7 @@ nav_order: 2
 
 # About Me
 
-I’m a geographer and educator passionate about mapping, cities, and design.
+I’m a student that is passionate about people, health, and having hobbies.
 
-- **Current role:** Professor of Urban Spatial Design in Japan  
-- **Interests:** Web mapping, spatial analysis, and creative geography 
+- **Current role:** Senior at Temple University studying Sociology, Public Health, Healthcare Management and GIS!  
+- **Interests:** Baking, crochet, long walks, and public health 
