@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Google Charts Project</title>
+
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <script type="text/javascript">
+   
+    google.charts.load('current', {'packages':['corechart']});
+
+    
+    google.charts.setOnLoadCallback(drawCharts);
+//Amazon Q prompt: give me code suggestions to help build interactive charts using the existing data in this file
+    function drawCharts() {
+
+      // DATA 
+      var data = google.visualization.arrayToDataTable([
+        ['Week', 'Study Hours', 'Test Score'],
+        ['Week 1', 5, 70],
+        ['Week 2', 8, 75],
+        ['Week 3', 6, 72],
+        ['Week 4', 10, 85],
+        ['Week 5', 12, 90]
+      ]);
+
+      // BAR CHART 
+      var barOptions = {
+        title: 'Study Hours per Week',
+        legend: { position: 'none' }
+      };
+
+      var barChart = new google.visualization.ColumnChart(document.getElementById('bar_chart'));
+      barChart.draw(data, barOptions);
+
+      //LINE CHART
+      var lineOptions = {
+        title: 'Test Scores Over Time',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var lineChart = new google.visualization.LineChart(document.getElementById('line_chart'));
+      lineChart.draw(data, lineOptions);
+    }
+  </script>
+</head>
+
+<body>
+
+  <h1>Hours Spent Studying and Test Scores</h1>
+
+  <div id="bar_chart" style="width: 600px; height: 400px;"></div>
+  <div id="line_chart" style="width: 600px; height: 400px;"></div>
+
+</body>
+</html>
